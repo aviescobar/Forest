@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicciones con y sin Escalado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Resultados de Predicción</h1>
+    <p><strong>MSE sin escalado:</strong> {{ mse_without_scaling }}</p>
+    <p><strong>MSE con escalado:</strong> {{ mse_with_scaling }}</p>
+
+    <h2>Gráfica de Predicciones</h2>
+    <img src="{{ url_for('plot_png') }}" alt="Gráfica de Predicciones">
+</body>
+</html>
